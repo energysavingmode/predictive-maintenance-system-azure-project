@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local Relational Databases
+database/predictive_maintenance.db
+backend/maintenance.db
+
+# Node.js environments
+node_modules/
+.env
+
+# Python environments & machine learning binaries
+__pycache__/
+*.pyc
+*.pkl
+ml/venv/
