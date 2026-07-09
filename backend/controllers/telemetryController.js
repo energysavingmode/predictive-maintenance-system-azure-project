@@ -10,7 +10,7 @@ exports.logSensorData = (req, res) => {
         VALUES (?, ?, ?, ?, ?, ?)
     `;
     
-    db.run(query, [device_id, Type || 'M', AirTemp, ProcessTemp, RPM, Torque, ToolWear], function(err) {
+    db.run(query, [device_id, AirTemp, ProcessTemp, RPM, Torque, ToolWear], function(err) {
         if (err) return res.status(500).json({ error: err.message });
         res.status(201).json({ message: "Sensor data logged securely in modern relational schema", id: this.lastID });
     });
